@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tic Tac Toe</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&family=Courier+Prime&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Menu Play Awal -->
+  <div class="container" id="menu">
+    <h1>Tic Tac Toe</h1>
+    <div class="hello-tasya">Hello Tasya!</div>
+    <div class="play-button" id="playButton" onclick="showGameMode()">Play</div>
+  </div>
+
+  <!-- Menu Pilih Mode -->
+  <div class="container" id="modeMenu" style="display: none;">
+    <h1>Pilih Mode</h1>
+    <div class="play-menu">
+      <button onclick="startGame('multiplayer')">Mode Multiplayer</button>
+      <button onclick="showDifficultySelector()">Mode AI</button>
+    </div>
+  </div>
+
+  <!-- Menu Pilih Difficulty -->
+  <div class="container" id="difficultyMenu" style="display: none;">
+    <h1>Pilih Difficulty</h1>
+    <div class="difficulty-selector">
+      <button onclick="startGameWithAI('easy')">Easy</button>
+      <button onclick="startGameWithAI('medium')">Medium</button>
+      <button onclick="startGameWithAI('hard')">Hard</button>
+      <button onclick="startGameWithAI('very-hard')">Very Hard</button>
+      <button onclick="startGameWithAI('impossible')">Impossible</button>
+    </div>
+  </div>
+
+  <!-- Game -->
+  <div class="container" id="game" style="display: none;">
+    <h1>Tic Tac Toe</h1>
+    <div class="status">Pilih Mode Permainan</div>
+    <div class="board" id="board"></div>
+    <div class="score">
+      <span>X: <span id="scoreX">0</span> </span> | 
+      <span>O: <span id="scoreO">0</span></span>
+    </div>
+    <button class="back-button" onclick="backToModeSelection()">Kembali ke Menu Mode</button>
+    <button onclick="resetGame()">Main Lagi</button>
+  </div>
+
+  <!-- Halaman Terima Kasih -->
+  <div class="thank-you-page" id="thankYouPage" style="display: none;">
+    <div class="thank-you-message">
+      makaseh ws njajal awokaowk gabut nyng, ono kata kata tersembunyi jal luru :)
+    </div>
+    <img src="https://vignette.wikia.nocookie.net/spongebob/images/e/e7/Patrick_Star_Happy.png/revision/latest?cb=20181031145234" class="patrick-image" alt="Patrick Senyum" />
+  </div>
+
+  <!-- Efek Suara -->
+  <audio id="clickSound" src="https://www.soundjay.com/button/beep-07.wav"></audio>
+  <audio id="winSound" src="https://www.soundjay.com/button/beep-03.wav"></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,135 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(135deg, #00aaff, #007bff);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  overflow: hidden;
+}
+.container {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  width: 400px;
+  transition: all 0.5s ease-in-out;
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+h1 {
+  margin-bottom: 20px;
+  font-size: 2.5rem;
+  color: #fff;
+}
+.status {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  gap: 10px;
+  margin: 20px auto;
+  animation: fadeIn 1s forwards 0.5s;
+}
+.cell {
+  width: 100px;
+  height: 100px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+  font-size: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.3s ease;
+}
+.cell:hover {
+  transform: scale(1.1);
+  background: rgba(255, 255, 255, 0.3);
+}
+.cell.winner {
+  background: #f1c40f !important;
+  color: #2c3e50;
+  animation: pop 0.4s ease forwards;
+}
+@keyframes pop {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+button {
+  background: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background 0.3s ease;
+}
+button:hover {
+  background: #0056b3;
+}
+.score {
+  font-size: 1.4rem;
+  margin-top: 15px;
+}
+.play-button {
+  margin-top: 20px;
+  padding: 15px 30px;
+  font-size: 1.5rem;
+  background: #00aaff;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  animation: fadeIn 1s forwards 2s;
+}
+.back-button {
+  background: #f44336;
+}
+.hello-tasya {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  font-weight: bold;
+  animation: fadeIn 1s forwards 2.5s;
+}
+.thank-you-page {
+  background: #007bff;
+  color: #fff;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Courier Prime', monospace;
+  text-align: center;
+  opacity: 0;
+  animation: fadeIn 2s forwards;
+}
+.thank-you-message {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+.patrick-image {
+  margin-top: 20px;
+  width: 200px;
+  border-radius: 10px;
+}
